@@ -81,6 +81,7 @@ public class Ship {
 
         System.out.println(ship1.name+ " Current Load "+ ship1.getCurrentLoad() + " MT");
         ship1.unload(980);
+        //remaining current load ?
 
 
         Ship ship2 = new Ship("KingFisher",10000);
@@ -94,6 +95,7 @@ public class Ship {
 
         System.out.println(ship2.name + " Current Load "+ ship2.getCurrentLoad() + " MT");
         ship2.unload(20000);
+        //remaining current load ?
 
     }
 
