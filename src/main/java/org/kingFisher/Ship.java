@@ -1,6 +1,8 @@
+package org.kingFisher;
+
 public class Ship {
-    private String name;
-    private double capacityMT;
+    protected final String name;
+    protected final double capacityMT;
     private double receivedFrom;
     private double currentLoadMT;
     private String destination;
@@ -19,6 +21,10 @@ public class Ship {
 
     // instance methods
     public void loadOil(double tons){
+        if(tons <=0){
+            System.out.println("Invalid Load.Oil Load should not Zero or Negative.");
+            return;
+        }
         currentLoadMT += tons;
         System.out.println(name + " Loaded "+ tons + " Mt of oil.");
     }
@@ -47,9 +53,9 @@ public class Ship {
 
     public static void main(String[] args) {
         Ship ship1 = new Ship("OceanTitan",1000);
-        System.out.println("New Ship created. Total Ships: "+ getTotalShips());
+        System.out.println("New org.kingFisher.Ship created. Total Ships: "+ getTotalShips());
         System.out.println(ship1.name +" Safety Standard: "+getSafetyStandard());
-        ship1.loadOil(950);
+        ship1.loadOil(0);
 
         if(ship1.isOverLoaded()){
             System.out.println("Warning "+ship1.name + " is overloaded!!");
@@ -62,18 +68,16 @@ public class Ship {
 
 
         Ship ship2 = new Ship("KingFisher",10000);
-        System.out.println("New Ship created. Total Ships: "+ getTotalShips());
+        System.out.println("New org.kingFisher.Ship created. Total Ships: "+ getTotalShips());
         System.out.println(ship2.name +" Safety Standard: "+getSafetyStandard());
-        ship2.loadOil(8000);
+        ship2.loadOil(-100);
         if(ship2.isOverLoaded()){
             System.out.println("Warning "+ship2.name + " is overloaded!!");
         }
-
         ship2.setDestination("CTG");
 
         System.out.println(ship2.name + " Current Load "+ ship2.getCurrentLoad() + " MT");
         ship2.unload();
-
 
     }
 
