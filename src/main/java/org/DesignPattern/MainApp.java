@@ -10,10 +10,12 @@ public class MainApp {
         // Create ship using factory
         Ship ship1 = ShipFactory.createShip("OceanTitan",1000);
 
+        service.printShipStatus(ship1);
+
         // Operations for Ship1
-        service.loadShip(ship1,500);
+        service.loadShip(ship1,1500);
+        service.checkOverLoad(ship1);
         service.unloadShip(ship1, 400);
 
-        service.printShipStatus(ship1);
     }
 }

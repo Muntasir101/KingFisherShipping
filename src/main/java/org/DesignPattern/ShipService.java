@@ -21,8 +21,14 @@ public class ShipService {
         }
     }
 
+    public void checkOverLoad(Ship ship){
+        if(ship.isOverLoaded()){
+            System.out.println("Ship is OverLoaded !!!!");
+        }
+    }
+
     public void printShipStatus(Ship ship){
-        System.out.println(ship.getName());
+        System.out.println("Ship Name: " + ship.getName());
     }
 
 }
