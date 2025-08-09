@@ -1,6 +1,6 @@
 package org.kingFisher;
 
-public class Ship {
+public class KingShip {
     protected final String name;
     protected final double capacityMT;
     private double receivedFrom;
@@ -11,7 +11,7 @@ public class Ship {
     private static final String SAFETY_STANDARD = "IMO 2020";
 
     // constructor
-    public Ship(String name, double capacityMT)
+    public KingShip(String name, double capacityMT)
     {
         this.name = name;
         this.capacityMT = capacityMT;
@@ -22,7 +22,7 @@ public class Ship {
     // instance methods
     public void loadOil(double tons){
         //Validation 1: Load oil should not be negative
-        if(tons <=0){
+        if(tons <=1){
             System.out.println("Invalid Load.Oil Load should not Zero or Negative.");
             return;
         }
@@ -68,7 +68,7 @@ public class Ship {
     }
 
     public static void main(String[] args) {
-        Ship ship1 = new Ship("OceanTitan",1000);
+        KingShip ship1 = new KingShip("OceanTitan",1000);
         System.out.println("New org.kingFisher.Ship created. Total Ships: "+ getTotalShips());
         System.out.println(ship1.name +" Safety Standard: "+getSafetyStandard());
         ship1.loadOil(950);
@@ -84,7 +84,7 @@ public class Ship {
         //remaining current load ?
 
 
-        Ship ship2 = new Ship("KingFisher",10000);
+        KingShip ship2 = new KingShip("KingFisher",10000);
         System.out.println("New org.kingFisher.Ship created. Total Ships: "+ getTotalShips());
         System.out.println(ship2.name +" Safety Standard: "+getSafetyStandard());
         ship2.loadOil(10000);

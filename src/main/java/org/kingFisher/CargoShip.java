@@ -1,6 +1,6 @@
 package org.kingFisher;
 
-public class CargoShip extends Ship{
+public class CargoShip extends KingShip {
 
     // Constructor
     public CargoShip(String name, double capacityMT){
