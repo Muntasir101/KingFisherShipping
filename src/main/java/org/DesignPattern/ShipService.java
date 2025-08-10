@@ -3,8 +3,8 @@ import org.DesignPattern.Ship;
 
 
 public class ShipService {
-    public void loadShip(Ship ship, double tons){
-        if(!ship.loadOil(tons)){
+    public void loadShip(Ship name, double tons){
+        if(!name.loadOil(tons)){
             System.out.println("Can not load.Capacity exceed.");
         }
         else{
@@ -29,6 +29,10 @@ public class ShipService {
 
     public void printShipStatus(Ship ship){
         System.out.println("Ship Name: " + ship.getName());
+    }
+
+    public void printTotalShipCount(){
+        System.out.println("Total Ship Created: "+Ship.getTotalShips());
     }
 
 }

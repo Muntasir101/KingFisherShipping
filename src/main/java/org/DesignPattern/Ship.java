@@ -42,5 +42,7 @@ public class Ship {
         return name;
     }
 
-
+    public static int getTotalShips(){
+        return totalShips;
+    }
 }
