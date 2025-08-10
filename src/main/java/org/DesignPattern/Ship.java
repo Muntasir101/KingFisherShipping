@@ -1,5 +1,6 @@
 package org.DesignPattern;
 
+// Encapsulation
 public class Ship {
     private final String name;
     private final double capacityMT;

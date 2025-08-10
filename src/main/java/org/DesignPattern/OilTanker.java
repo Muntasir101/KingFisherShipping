@@ -1,5 +1,6 @@
 package org.DesignPattern;
 
+// inheritance
 public class OilTanker extends Ship{
     private double oilQuality;
 
@@ -12,6 +13,7 @@ public class OilTanker extends Ship{
         return oilQuality;
     }
 
+    // polymorphism
     @Override
     public void sail(){
         System.out.println("Oil Tanker is Sailing.....");

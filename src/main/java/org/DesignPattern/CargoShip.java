@@ -1,5 +1,6 @@
 package org.DesignPattern;
 
+// inheritance
 public class CargoShip extends Ship {
 
     private int numberOfContainers;
@@ -13,6 +14,7 @@ public class CargoShip extends Ship {
         return numberOfContainers;
     }
 
+    // polymorphism
     @Override
     public void sail(){
         System.out.println("Cargo is Sailing.....");
