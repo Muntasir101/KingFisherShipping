@@ -1,5 +1,4 @@
 package org.DesignPattern;
-import org.DesignPattern.Ship;
 
 public class OilTanker extends Ship{
     private double oilQuality;
@@ -11,6 +10,11 @@ public class OilTanker extends Ship{
 
     public double getOilQuality(){
         return oilQuality;
+    }
+
+    @Override
+    public void sail(){
+        System.out.println("Oil Tanker is Sailing.....");
     }
 
 }

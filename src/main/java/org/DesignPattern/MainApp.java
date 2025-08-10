@@ -8,16 +8,20 @@ public class MainApp {
         ShipService service = new ShipService();
 
         // Create ship using factory
-        Ship shipObject1 = ShipFactory.createShip("oil","OceanTitan_OIL",1000);
-        Ship shipObject2 = ShipFactory.createShip("cargo","OceanRock_CARGO",1000);
-        Ship shipObject3 = ShipFactory.createShip("ship","Octopas_Ship",1000);
+        Ship oilShip = ShipFactory.createShip("oil","OceanTitan_OIL",1000);
+        Ship cargoShip = ShipFactory.createShip("cargo","OceanRock_CARGO",1000);
+        Ship normalShip = ShipFactory.createShip("ship","Octopus_Ship",1000);
 
-        service.printShipStatus(shipObject1);
+        oilShip.sail();
+        cargoShip.sail();
+        normalShip.sail();
+
+        service.printShipStatus(oilShip);
 
         // Operations for Ship1
-        service.loadShip(shipObject1,500);
-        service.checkOverLoad(shipObject1);
-        service.unloadShip(shipObject1, 400);
+        service.loadShip(oilShip,500);
+        service.checkOverLoad(oilShip);
+        service.unloadShip(oilShip, 400);
 
         service.printTotalShipCount();
 

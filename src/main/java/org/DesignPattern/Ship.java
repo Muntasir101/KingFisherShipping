@@ -45,4 +45,8 @@ public class Ship {
     public static int getTotalShips(){
         return totalShips;
     }
+
+    public void sail(){
+        System.out.println("Ship is Sailing....");
+    }
 }

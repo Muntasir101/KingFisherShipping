@@ -13,4 +13,9 @@ public class CargoShip extends Ship {
         return numberOfContainers;
     }
 
+    @Override
+    public void sail(){
+        System.out.println("Cargo is Sailing.....");
+    }
+
 }

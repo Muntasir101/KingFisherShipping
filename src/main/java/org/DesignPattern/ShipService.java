@@ -1,6 +1,4 @@
 package org.DesignPattern;
-import org.DesignPattern.Ship;
-
 
 public class ShipService {
     public void loadShip(Ship name, double tons){
